@@ -23,8 +23,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    - name: Point on directory
-      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test rectangle
       run: python -m unittest rectangle.py
   Test_square-ubuntu:
@@ -41,8 +39,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    - name: Point on directory
-      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test square
       run: python -m unittest square.py
   Test_circle-ubuntu:
@@ -59,8 +55,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    - name: Point on directory
-      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test circle
       run: python -m unittest circle.py
   Test_triangle-ubuntu:
@@ -77,8 +71,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    - name: Point on directory
-      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test triangle
       run: python -m unittest triangle.py
   Test_rectangle-windows:
@@ -95,8 +87,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    # - name: Point on directory
-    #   run: export PYTHONPATH=$PYTHONPATH{.
     - name: Test rectangle
       run: python -m unittest rectangle.py
   Test_square-windows:
@@ -113,8 +103,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    - name: Point on directory
-      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test square
       run: python -m unittest square.py
   Test_circle-windows:
@@ -131,8 +119,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    - name: Point on directory
-      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test circle
       run: python -m unittest circle.py
   Test_triangle-windows:
@@ -149,7 +135,5 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install stem
-    - name: Point on directory
-      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test triangle
       run: python -m unittest triangle.py
