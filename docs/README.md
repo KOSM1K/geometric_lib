@@ -1,3 +1,5 @@
+[![Test](https://github.com/KOSM1K/geometric_lib/actions/workflows/test.yml/badge.svg?branch=new_features_465031)](https://github.com/KOSM1K/geometric_lib/actions/workflows/test.yml)
+
 # Geometric Lib
 > Geometric Lib is a lib, that provides functions for calculations of area and perimeter of geometric figures
 
