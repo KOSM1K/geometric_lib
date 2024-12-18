@@ -55,5 +55,3 @@ class SquareTestSuite(unittest.TestCase):
         res = perimeter(1)
         self.assertEqual(res, 4)
         print(1, res)
-
-A
