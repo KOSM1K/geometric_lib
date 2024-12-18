@@ -8,8 +8,8 @@ on:
 permissions:
   contents: read
 
-jobs:
-  preparations:
+jobs:  
+  Test_rectangle:
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: ${{ github.workspace }}
@@ -25,35 +25,59 @@ jobs:
         pip install stem
     - name: Point on directory
       run: export PYTHONPATH=$PYTHONPATH:.
-  Test_rectangle:
-    runs-on: ubuntu-latest
-    env:
-      PYTHONPATH: ${{ github.workspace }}
-    needs: preparations
-    steps:
     - name: Test rectangle
       run: python -m unittest rectangle.py
   Test_square:
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: ${{ github.workspace }}
-    needs: preparations
     steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Satisfy requirements
+      run: |
+        python -m pip install --upgrade pip
+        pip install stem
+    - name: Point on directory
+      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test square
       run: python -m unittest square.py
   Test_circle:
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: ${{ github.workspace }}
-    needs: preparations
-    steps:  
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Satisfy requirements
+      run: |
+        python -m pip install --upgrade pip
+        pip install stem
+    - name: Point on directory
+      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test circle
       run: python -m unittest circle.py
   Test_triangle:
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: ${{ github.workspace }}
-    needs: preparations
     steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Satisfy requirements
+      run: |
+        python -m pip install --upgrade pip
+        pip install stem
+    - name: Point on directory
+      run: export PYTHONPATH=$PYTHONPATH:.
     - name: Test triangle
       run: python -m unittest triangle.py
