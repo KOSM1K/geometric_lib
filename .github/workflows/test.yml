@@ -27,24 +27,32 @@ jobs:
       run: export PYTHONPATH=$PYTHONPATH:.
   Test_rectangle:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}
     needs: preparations
     steps:
     - name: Test rectangle
       run: python -m unittest rectangle.py
   Test_square:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}
     needs: preparations
     steps:
     - name: Test square
       run: python -m unittest square.py
   Test_circle:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}
     needs: preparations
     steps:  
     - name: Test circle
       run: python -m unittest circle.py
   Test_triangle:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}
     needs: preparations
     steps:
     - name: Test triangle
