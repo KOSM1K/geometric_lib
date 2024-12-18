@@ -22,10 +22,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install stem
     - name: Test rectangle
-      run: python -m unittest rectangle.py || true
+      run: python -m unittest rectangle.py
+      continue-on-error: true
     - name: Test square
-      run: python -m unittest square.py || true
+      run: python -m unittest square.py
+      continue-on-error: true
     - name: Test circle
-      run: python -m unittest circle.py || true
+      run: python -m unittest circle.py
+      continue-on-error: true
     - name: Test triangle
-      run: python -m unittest triangle.py || true
+      run: python -m unittest triangle.py
+      continue-on-error: true
